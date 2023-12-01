@@ -12,7 +12,10 @@ import useAuth from './hooks/useAuth'
 function App() {
 const {Auth,setAuth} = useAuth();
   return (
-    <Routes>
+    <Routes >
+      <Route path='/' element={<Base />}>
+        <Route path='/' element={<Logon />} />
+      </Route>
       <Route path='/auth' element={<Base />}>
         <Route path='/auth/login' element={<Logon />} />
         <Route path='/auth/signup' element={<SignUp />} />
